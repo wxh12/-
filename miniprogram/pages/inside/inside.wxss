@@ -1,0 +1,41 @@
+/* miniprogram/pages/inside/inside.wxss */
+
+.container{
+    padding: 0 10rpx;
+}
+
+.image-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.picture{
+    width: 730rpx;
+}
+
+.title{
+    width: 20em;
+    /* 一行有18个字，宽度设18em 1em相当于1font-size 宽度（18*18）又由于有字间距（18*4/32）= 2 故设20em */
+    font-size: 36rpx;
+    letter-spacing: 4rpx;
+    line-height: 72rpx;
+}
+
+.word{
+    margin-top: 20rpx;
+    text-align: right;
+    width: 750rpx;
+}
+
+.ceshi{
+    width: 300rpx;
+    height: 300rpx;
+    background-color: red;
+}
+
+.ceshiChild{
+    width: 100rpx;
+    height: 100rpx;
+    background-color: aqua;
+}

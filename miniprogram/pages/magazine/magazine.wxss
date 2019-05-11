@@ -1,0 +1,136 @@
+/* miniprogram/pages/magazine/magazine.wxss */
+.recomend-container{
+    padding: 0 25rpx;
+}
+
+.tuijian{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date{
+    position: relative;
+    font-size: 52rpx;
+    letter-spacing: 10rpx;
+    padding-bottom: 24rpx;
+    margin-top: 20rpx;
+}
+
+.date::after{
+    position: absolute;
+    left: 62rpx;
+    bottom: 0;
+    display: block;
+    content: '';
+    width: 114rpx;
+    height: 4rpx;
+    background-color: #999;
+}
+
+.title{
+    font-size: 24rpx;
+    margin-top: 16rpx;
+    margin-bottom: 30rpx;
+    text-align: center;
+    line-height: 56rpx;
+}
+
+.cover{
+    width: 710rpx;
+}
+
+.recomend-box text{
+    display: inline-block;
+    border: 1px solid #000;
+    padding: 10rpx 20rpx;
+    font-size: 28rpx;
+    margin: 20rpx 20rpx 20rpx 0;
+}
+
+.recomend-box text:first-of-type{
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* 列表 */
+.list{
+    background-color: #ebebeb;
+    padding: 35rpx 35rpx 0;
+}
+
+.per-artical{
+    background-color: #fff;
+    padding-bottom: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.per-artical:last-of-type{
+    margin-bottom: 0;
+}
+
+.article-head{
+    padding: 20rpx;
+}
+
+.article-head image{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 20rpx;
+}
+
+.article-head text{
+    font-size: 28rpx;
+    color: #666;
+}
+
+.artical-cover image{
+    width: 100%;
+}
+
+.artical-title{
+    margin: 30rpx;
+}
+
+.artical-title text{
+    font-size: 40rpx;
+}
+
+.artical-handle-box{
+    padding: 0 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-type text{
+    border: 1px solid #000;
+    padding: 10rpx 20rpx;
+}
+
+.artical-handle{
+    display: flex;
+}
+
+.artical-handle image{
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 20rpx;
+}
+
+
+
+.ceshiBtn image{
+   width: 50rpx;
+   height: 50rpx; 
+}
+
+.ceshiBtn{
+    background-color: transparent;
+}
+
+.ceshiBtn::after{
+    border: none;
+}

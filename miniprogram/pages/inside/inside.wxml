@@ -1,0 +1,22 @@
+<!--miniprogram/pages/inside/inside.wxml-->
+<text></text>
+<!-- 图片自适应  rpx -->
+<view class="container">
+    <view class="image-box">
+        <image src="image/picture.png" class="picture" mode="widthFix"/>
+        <text class="title">是否要卸下残红熄灭骄傲才会被施以恩宠也曾是朱砂心口月光床头杯一腔热血孤勇</text>
+    </view>
+    <view class="word">       
+        <text bindtap="ceshi">---既生厌-昙骨</text>
+        <!-- <text bind:tap="ceshi">---既生厌-昙骨</text> -->
+        <!-- 添加事件  ceshi函数名 -->
+        <!-- 绑定事件的方式：1.bind：不能阻止事件冒泡    2.catch：阻止事件冒泡 -->
+    </view>
+</view>
+
+<view class="dianji" bind:tap="jump">welcome</view>
+
+
+<view catch:tap="parentTap" class="ceshi">
+    <view catch:tap="childTap" class="ceshiChild"></view>
+</view>

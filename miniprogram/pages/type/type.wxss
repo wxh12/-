@@ -1,0 +1,107 @@
+/* miniprogram/pages/type/type.wxss */
+
+/* @import "../common-list.wxss";  引用其他css文件（必须写；） */
+
+page{
+    background-color: #ebebeb;
+}
+.title-container{
+    position: relative;
+}
+
+.title-cover{
+    width: 750rpx;
+    height: 500rpx;
+}
+
+.title-box{
+    box-sizing: border-box;
+    position: absolute;
+    width: 660rpx;
+    bottom: -80rpx;
+    left: 45rpx;
+    padding: 20rpx;
+    background-color: #fff;
+}
+
+.title{
+    font-size: 56rpx;
+}
+
+.title-handle{
+    text-align: right;
+    margin-top: 10rpx;
+}
+
+.title-handle image{
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 20rpx;
+}
+
+
+.list{
+    margin-top: 120rpx;
+    background-color: #ebebeb;
+    padding: 35rpx 35rpx 0;
+}
+
+.per-artical{
+    background-color: #fff;
+    padding-bottom: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.per-artical:last-of-type{
+    margin-bottom: 0;
+}
+
+.article-head{
+    padding: 20rpx;
+}
+
+.article-head image{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 20rpx;
+}
+
+.article-head text{
+    font-size: 28rpx;
+    color: #666;
+}
+
+.artical-cover image{
+    width: 100%;
+}
+
+.artical-title{
+    margin: 30rpx;
+}
+
+.artical-title text{
+    font-size: 40rpx;
+}
+
+.artical-handle-box{
+    padding: 0 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-type text{
+    padding: 10rpx 20rpx;
+    font-size: 36rpx;
+}
+
+.artical-handle{
+    display: flex;
+}
+
+.artical-handle image{
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 20rpx;
+}

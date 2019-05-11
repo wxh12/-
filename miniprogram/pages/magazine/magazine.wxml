@@ -1,0 +1,100 @@
+<!--miniprogram/pages/magazine/magazine.wxml-->
+<!-- <text>miniprogram/pages/magazine/magazine.wxml</text> -->
+
+<!-- <view wx:for="{{array}}">{{item}}-{{index}}</view> -->
+
+<!-- 渲染多个列表用block标签包起来 -->
+<!-- <block wx:for="{{array}}">
+    <view >{{item}}</view>
+    <view >{{index}}</view>
+</block> -->
+
+<!-- wx:key   添加唯一标识(可随便写) -->
+<!-- <view wx:for="{{array1}}" wx:key="id">{{item.id}}</view>
+
+<view wx:for="{{array}}" wx:key="*this">{{item}}</view> -->
+
+
+<!-- 点击子元素时 事件冒泡到父元素 此时父元素的target是child，currentTarget是parent -->
+<!-- <view style="width:100px;height:100px;background-color:red" bind:tap="parent" data-type="parent">
+    <view style="width:50px;height:50px;background-color:blue" bind:tap="child" data-type="child"></view >
+</view> -->
+
+
+
+<!-- 转发功能 -->
+<!-- <button open-type="share" class="ceshiBtn">
+    <image src="images/Icon_relay1.png" />
+</button> -->
+
+
+<!-- <button size="mini" type="primary" plain="{{true}}" disabled="{{true}}" loading="{{true}}">dfg</button> -->
+
+
+<!-- <view wx:if="{{aaa}}">tt</view>
+<view wx:else>123456</view> -->
+
+
+<view class="container">
+    <!-- tuijian -->
+    <view class="recomend-container">
+        <view class="tuijian">
+            <text class="date">{{recomend.date}}</text>
+            <text class="title">{{recomend.title}}</text>
+            <image class="cover" src="{{recomend.imgSrc}}"  mode="widthFix"/>
+        </view>
+        <view class="recomend-box">
+            <text>+</text>
+            <text bind:tap="onArtocleType" data-articleTypeId='{{item.typeId}}' wx:for="{{markType}}" wx:key="id">{{item.type}}</text>
+            <!-- <text>{{markType[0].type}}</text>
+            <text>{{markType[1].type}}</text>
+            <text>{{markType[2].type}}</text>
+            <text>{{markType[3].type}}</text>
+            <text>{{markType[4].type}}</text>
+            <text>{{markType[5].type}}</text>
+            <text>{{markType[6].type}}</text>
+            <text>{{markType[7].type}}</text> -->
+            <text>...</text>
+        </view>
+    </view>
+    
+    <!-- liebiao -->
+    <view class="list">
+        <!-- 第一個列表 -->
+        <view  class="per-artical" wx:for="{{articleList}}" wx:key="id">
+            <view class="article-head">
+                <image src="{{item.markPeopleAvatar}}" />
+                <text >{{item.markPeople}}</text>
+                <text >等</text>
+                <text >{{item.markCount}}</text>
+                <text >人馬克了</text>
+            </view> 
+            <view class="artical-cover">
+                <image src="{{item.articleImgsrc}}" mode="widthFix"/>
+            </view>           
+            <view class="artical-title">
+                <text space="ensp">{{item.articleTitle}}</text>
+            </view>            
+            <view class="artical-handle-box">
+                <view class="artical-type">
+                    <text >{{item.articleType}}</text> 
+                </view>
+                <view class="artical-handle">
+                    <view >
+                        <image bind:tap="more" data-articleType="{{item.articleType}}" src="images/Icon_more1.png"></image> 
+                    </view>
+                    <view >
+                        <image src="images/Icon_relay1.png"></image>
+                    </view>
+                    <view>
+                    <!-- 通过data- 来传值 -->
+                        <image bind:tap="likeTap" data-likeIndex="{{index}}" wx:if="{{listLike[index]}}" src="images/Icon_circle_fill1.png"></image>
+                        <image bind:tap="likeTap" data-likeIndex="{{index}}" wx:else src="images/Icon_circle.png"></image>
+                    </view>
+                </view>                
+            </view>          
+        </view>
+        <!-- 第一個列表結束 -->
+    </view>
+</view>
+

@@ -1,0 +1,56 @@
+<!--miniprogram/pages/type/type.wxml-->
+<!-- <text>miniprogram/pages/type/type.wxml</text> -->
+<view class='container'>
+    <view class='title-container'>              
+        <image class="title-cover"  src="{{titleInfo.imgSrc}}" />   
+        <view class='title-box'>
+             <view class="title">
+                <text >{{titleInfo.title}}读书</text>
+            </view >
+            <view class='title-handle'>
+                <image src="/pages/magazine/images/Icon_relay1.png" />
+                <image src="/pages/magazine/images/Icon_more1.png"  />
+            </view> 
+        </view>              
+                                   
+    </view>   
+    <view class="list">
+        <!-- 第一個列表 -->
+        <view  class="per-artical" wx:for="{{articleList}}" wx:key="id">
+            <view class="article-head">
+                <image src="{{item.markPeopleAvatar}}" />
+                <text >{{item.markPeople}}</text>
+                <text >等</text>
+                <text >{{item.markCount}}</text>
+                <text >人馬克了</text>
+            </view> 
+            <view class="artical-cover">
+                <image src="{{item.articleImgsrc}}" mode="widthFix"/>
+            </view>           
+            <view class="artical-title">
+                <text space="ensp">{{item.articleTitle}}</text>
+            </view>            
+            <view class="artical-handle-box">
+                <view class="artical-type">
+                    <text >1天前</text>
+                </view>
+                <view class="artical-handle">
+                    <view >
+                        <image bind:tap="more" data-articleType="{{item.articleType}}" src="/pages/magazine/images/Icon_more1.png"></image> 
+                    </view>
+                    <view >
+                        <image src="/pages/magazine/images/Icon_relay1.png"></image>
+                    </view>
+                    <view>
+                    <!-- 通过data- 来传值 -->
+                        <image bind:tap="likeTap" data-likeIndex="{{index}}" wx:if="{{listLike[index]}}" src="/pages/magazine/images/Icon_circle_fill1.png"></image>
+                        <image bind:tap="likeTap" data-likeIndex="{{index}}" wx:else src="/pages/magazine/images/Icon_circle.png"></image>
+                    </view>
+                </view>                
+            </view>          
+        </view>
+    </view>
+</view>
+
+
+<!-- 自定义组件 -->
